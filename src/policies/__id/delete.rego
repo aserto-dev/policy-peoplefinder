@@ -1,5 +1,7 @@
 package peoplefinder.DELETE.api.users.__id
 
+import input.user.attributes.properties as user_props
+
 default allowed = false
 
 default visible = false
@@ -7,14 +9,12 @@ default visible = false
 default enabled = false
 
 allowed {
-	props = input.user.attributes.properties
-	props.department == "Operations"
-	props.title == "IT Manager"
+	user_props.department == "Operations"
+	user_props.title == "IT Manager"
 }
 
 visible {
-	props = input.user.attributes.properties
-	props.department == "Operations"
+	user_props.department == "Operations"
 }
 
 enabled {
