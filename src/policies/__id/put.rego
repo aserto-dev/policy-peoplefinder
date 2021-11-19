@@ -1,5 +1,7 @@
 package peoplefinder.PUT.api.users.__id
 
+import input.user.attributes.properties as user_props
+
 default allowed = false
 
 default visible = true
@@ -7,8 +9,7 @@ default visible = true
 default enabled = true
 
 allowed {
-	props = input.user.attributes.properties
-	props.department == "Operations"
+	user_props.department == "Operations"
 }
 
 allowed {
